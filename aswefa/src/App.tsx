@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar.tsx";
-import Home from "./Pages/Home.tsx";
+import Home from "./Pages/Home/Home.tsx";
 import Management from "./Pages/Management.tsx";
 import DrivingLog from "./Pages/DrivingLog.tsx";
 import LocationSearch from "./Pages/LocationSearch.tsx";

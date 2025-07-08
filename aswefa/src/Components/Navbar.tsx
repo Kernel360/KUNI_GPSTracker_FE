@@ -14,8 +14,8 @@ const navItems = [
 
 function Navbar() {
   return (
-    <nav className="flex flex-col items-center bg-[#F5F6FF] h-screen min-w-[200px] p-4">
-      <NavLink to="/" end>
+    <nav className="flex flex-col items-center bg-[#F5F6FF] h-screen min-w-[200px]">
+      <NavLink className="mb-3" to="/" end>
         <img src={logo} alt="logo" />
       </NavLink>
       {navItems.map(({ to, icon, label }) => (
@@ -24,7 +24,7 @@ function Navbar() {
           to={to}
           end
           className={({ isActive }) =>
-            `text-[1rem] mb-7 bg-white px-5 py-2 flex gap-2 items-center rounded-[20px]
+            `text-[1rem] mb-9 bg-white px-5 py-2 flex gap-2 items-center rounded-[20px]
              transition-opacity duration-200
              ${isActive ? "opacity-100 shadow-xl" : "opacity-50"}`
           }
