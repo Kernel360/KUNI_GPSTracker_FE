@@ -8,13 +8,15 @@ import LocationSearch from "./Pages/LocationSearch.tsx";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/location" element={<LocationSearch />}/>
-        <Route path="/management" element={<Management />} />
-        <Route path="/log" element={<DrivingLog />} />
-      </Routes>
+      <div className="flex">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/location" element={<LocationSearch />}/>
+          <Route path="/management" element={<Management />} />
+          <Route path="/log" element={<DrivingLog />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
