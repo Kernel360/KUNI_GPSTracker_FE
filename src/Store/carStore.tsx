@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { currentCarList } from "@/Api/currentCarList";
+import { toast } from "sonner";
 
 interface Car {
   number: string;   // 차량 번호
@@ -74,6 +75,7 @@ export const useCarStore = create<CarStore>((set, get) => ({
       selected.delete(carNumber);
     } else {
       selected.add(carNumber);
+      toast(`${selected.size}개의 차량이 선택되었습니다.`);
     }
     set({ selected });
   },
@@ -86,7 +88,9 @@ export const useCarStore = create<CarStore>((set, get) => ({
       visibleCars.forEach((car) => selected.delete(car.number));
     } else {
       visibleCars.forEach((car) => selected.add(car.number));
+      toast(`${selected.size}개의 차량이 선택되었습니다.`);
     }
     set({ selected });
+    
   },
 }));

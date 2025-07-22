@@ -6,7 +6,7 @@ import {
   DialogTitle,
 } from "@/Components/ui/dialog";
 import { Button } from "@/Components/ui/button";
-import { CircleAlert, FileX2, Trash } from "lucide-react";
+import { CircleAlert, FileX2 } from "lucide-react";
 import { useCarStore } from "../../Store/carStore";
 import { toast } from "sonner";
 
@@ -33,9 +33,9 @@ export function DeleteButton() {
             });
           }
         }}
-        className="bg-[#FF4343] gap-3 hover:bg-[#FF4343]/80"
+        className="min-w-[96px] px-4 py-2 bg-[#FF4343] gap-2 hover:bg-[#FF4343]/80 justify-center"
       >
-        <Trash strokeWidth={3} size={20} /> 삭제
+        삭제( {selected.size} )
       </Button>
 
       <DialogContent className="w-[25%]">

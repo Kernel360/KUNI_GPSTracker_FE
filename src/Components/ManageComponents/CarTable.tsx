@@ -13,6 +13,7 @@ import { useRef, useState } from "react";
 import { useCarStore } from "../../Store/carStore";
 import { ArrowDownUp } from "lucide-react";
 import { StatusBadge } from "../StatusBadge";
+import { cn } from "@/lib/utils";
 
 export function CarTable() {
   const tableRef = useRef<HTMLDivElement>(null); // 테이블의 너비값을 전달하기 위한 wrapper
@@ -96,7 +97,7 @@ export function CarTable() {
       </TableHeader>
       <TableBody>
         {visibleCars.map((car) => (
-          <TableRow key={car.number} className="text-center">
+          <TableRow key={car.number} className={cn("text-center", selectedCars.has(car.number) ? "bg-muted" : "")}>
             <TableCell className="font-medium">{car.number}</TableCell>
             <TableCell>{car.name}</TableCell>
             <TableCell>{car.mileage.toLocaleString()} km</TableCell>

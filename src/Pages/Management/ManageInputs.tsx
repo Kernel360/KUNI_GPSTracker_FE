@@ -11,10 +11,9 @@ export function ManageInputs() {
         <SearchInput />
         <StatusSelect />
         <SearchButton />
-        <DeleteButton />
+        <AddCarButton />
       </div>
-
-      <AddCarButton />
+      <DeleteButton />
     </div>
   );
 }
