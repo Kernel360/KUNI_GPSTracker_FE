@@ -20,6 +20,11 @@ type SelectedCarStore = {
 	setSelectedCar: (car: CarInfo | null) => void;
 }
 
+// type CarListPageStore = {
+// 	carListPage: boolean;
+// 	setCarListPage: (carListPage: boolean) => void;
+// }
+
 type CarStatusBtnStore = {
 	carStatusBtn: string;
 	setCarStatusBtn: (selectedCarStatusBtn: string) => void;
@@ -72,11 +77,16 @@ type SelectedCarLatLng = {
 }
 
 // carList에서 하나의 차량을 선택하였을 때 selectedCar에 해당 차량을 저장
-// selectedCar에 저장된 차량이 있으면 carList에서 차량 정보 표시
+// 선택된 selectedCar은 carList.tsx에서 fetchSelectedCarStat의 파라미터로 사용
 export const useSelectCarStore = create<SelectedCarStore>((set) => ({
 	selectedCar: null,
 	setSelectedCar: (car) => set({ selectedCar: car})
 }));
+
+// export const useCarListPageStore = create<CarListPageStore>((set) => {
+// 	carListPage: true,
+// 	setCarListPage: (carListPage) => set({ carListPage: carListPage})
+// })
 
 // carList에서 한 차량을 클릭했을 때, 해당 차량을 확대하여 보여주는 데 사용
 export const useTrackCarStore = create<MapStateStoreCarList>((set) => ({

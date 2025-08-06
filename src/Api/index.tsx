@@ -2,7 +2,7 @@ import ky from 'ky';
 import { handleResponse } from './hooks/handleResponse';
 
 export const instance = ky.create({
-  prefixUrl: 'http://main-alb-475201330.ap-northeast-2.elb.amazonaws.com/', // baseURL 설정
+  prefixUrl: 'http://main-alb-1302928393.ap-northeast-2.elb.amazonaws.com/', // baseURL 설정
   // headers: {
   //   Authorization: '',
   //   // 이후 헤더 항목 추가
